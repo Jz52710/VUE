@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>跑马灯</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-text="contant"></div>
+        <input type="button" value="开跑" @click="run">
+        <input type="button" value="停止" @click="stop">
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            contant:'新小米儿啊，真TM香！'
+        },
+        methods:{
+            run(){
+               t = setInterval(()=>{
+                    this.contant = this.contant.slice(1)+this.contant[0]
+                },200)
+            },
+            stop(){
+                clearInterval(t)
+            }
+        }
+    })
+</script>
+</html>

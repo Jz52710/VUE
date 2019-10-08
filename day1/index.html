@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div class="app">
+        <h2>{{ title }}</h2>
+        <h3 v-text="title1"></h3>
+        <h4 v-html="contant"></h4>
+<!--        双向数据绑定-->
+        <input type="text" v-model="value">
+        <div>{{ value }}</div>
+<!--        v-if-->
+        <div v-if = 'yes'>我的值为true</div>
+        <div v-if = 'no'>我的值为flase</div>
+        <div v-if = 'age<30'>{{age}}</div>
+<!--v-show-->
+        <div v-show = 'age<30'>{{age}}</div>
+        <h2 v-if ='age<20'>{{age}}</h2>
+        <h2 v-else-if="age==22">{{age}}</h2>
+        <h2 v-else>太小了</h2>
+<!--        v-for-->
+        <div v-for="i,v in data">
+            <span>{{v}}</span>
+            <span>{{i.name}}</span>
+            <span>{{i.age}}</span>
+            <span>{{i.sex}}</span>
+        </div>
+<!--        v-once-->
+        <input type="text" v-model="value">
+        <div v-once v-text="value"></div>
+        <div>绑定内容：{{value}}</div>
+<!--        v-bing-->
+        <div v-bind:style="style"></div>|
+        <div :style="style"></div>|
+        <div :style="{width:width+'px',height:height+'px',backgroundColor:color}"></div>
+<!--        v-on-->
+        <div v-bind:style="style" v-on:click="fun"></div>
+    </div>
+</body>
+<script>
+    //实例
+    let vm = new Vue({
+        el:".app", //element  获取dom元素
+        data:{   //viem层  数据来源
+            title:'妈妈我想吃烤山药',
+            title1:'吃，吃大块的',
+            contant:'<p>妈妈真好，谢谢妈妈</p>',
+            value:'100',
+            yes:true,
+            no:false,
+            age:22,
+            width:100,
+            height:100,
+            color:'red',
+            data:[
+                {name:'小白',age:'12',sex:'男'},
+                {name:'小红',age:'12',sex:'女'},
+                {name:'小黑',age:'12',sex:'男'},
+            ],
+            style:'width:200px;height:200px;backgroundColor:pink',
+        },
+        methods:{
+            fun:function(){
+                alert(123)
+            }
+        }
+    })
+
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学生表</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form action="" onsubmit="return false">
+<!--             onsubmit="return false"提交不刷新本页面-->
+            <div :style="divs">
+                <h3 :style="float">Name:</h3>
+                <input type="text" v-model="newstudent.name">
+            </div>
+            <div :style="divs">
+                <h3 :style="float">age:</h3>
+                <input type="text" v-model="newstudent.age">
+            </div>
+            <div :style="divs">
+                <h3 :style="float">sex:</h3>
+                <select name="" id="" :style="{height:height+'px'}" v-model="newstudent.sex">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </div>
+            <input type="submit" @click="adds">
+
+        </form>
+        <table class="table table-striped">
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>sex</td>
+                <td>Delete</td>
+            </tr>
+            <tr v-for="i,v in student">
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.sex}}</td>
+                <td>
+                    <button class="btn btn-danger" @click="del(v)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            divs:'float:left;margin-right:20px',
+            float:'float:left;margin:0',
+            height:'26',
+            newstudent:{
+                name:'',
+                age: '',
+                sex:'男'
+            },
+            student:[
+                {name:'路飞',age:'20',sex:'男'}
+            ]
+        },
+        methods:{
+            adds:function () {
+                this.student.push(this.newstudent);
+                this.newstudent={
+                    name:'',
+                    age: '',
+                    sex:'男'
+                }
+            },
+            del:function (index) {
+                this.student.splice(index,1)
+            }
+        }
+    })
+</script>
+</html>
