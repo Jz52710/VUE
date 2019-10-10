@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件</title>
+    <script src="../day1/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+<!--        <comson></comson>-->
+        <com-son></com-son>
+        <jbu></jbu>
+    </div>
+    <template id="zj1">
+        <div>
+<!--            组件的元素只有一个-->
+            <p>这是组件1</p>
+            <p>这是组件2</p>
+            <p>局部</p>
+        </div>
+    </template>
+</body>
+<script>
+    //全局创建
+    //创建组件
+    // let com1 = Vue.extend({
+    //     // template:'<div><p>这是组件</p></div>'
+    //     template:'#zj1'
+    // })
+    // //注册组件 参数1：组件名  参数2：组件
+    // //组件名规范： 全部小写，驼峰命名法(html不区分大小写，再html中使用驼峰命名法的组件名时通过连字符方式写入);连字符方式。
+    // Vue.component('comSon',com1)
+    // //方式2
+    // Vue.component('com-son',Vue.extend({
+    //     template:'#zj1'
+    // }))
+    //方式三
+    Vue.component('com-son',{
+        template: '#zj1'
+    })
+
+    let vm = new Vue({
+        el:'#app',
+        data:{
+
+        },
+        methods:{
+
+        },
+        components:{
+            'jbu':{
+                template: '#zj1'
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过滤器</title>
+    <script src="../day1/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{ time | date('yyyy-MM-dd hh:mm:ss') }}</p>
+        <p>{{ time | date('yy-MM-dd') }}</p>
+        <p>{{ time | date('yyyy-MM-dd') }}</p>
+        <p>{{ time | date('hh:mm:ss yyyy-MM-dd') }}</p>
+        <p>{{ time | date('hh:mm:ss') }}</p>
+        <p>{{ time | date('yyyy/MM/dd hh:mm:ss') }}</p>
+    </div>
+</body>
+<script>
+    Vue.filter('date',function (val,format='') {
+        // console.log(format)//输出date中传入的参数
+        let date = new Date(val) //创建Date对象：new Date()
+        // console.log(date)
+        // console.log(/(y+)/.test(format))
+        if (/(y+)/.test(format)) {//正则匹配含有y的字符串，并将其替换为当前年
+            format = format.replace(RegExp.$1,(date.getFullYear()+'').substr(4-RegExp.$1.lenght))//替换年
+            //RegExp.$1是RegExp的一个属性,指的是与正则表达式匹配的第一个 子匹配(以括号为标志)字符串
+            //getFullYear 	从 Date 对象以四位数字返回年份。
+            //RegExp 正则表达式描述了字符的模式对象。
+            //substr 从start下标开始，到length长度结束。
+            // console.log(format)
+        }
+        let o = {
+            'M+':date.getMonth()+1,//月
+            'd+':date.getDate(),//日
+            'h+':date.getHours(),//时
+            'm+':date.getMinutes(),//分
+            's+':date.getSeconds(),//秒
+        }
+        for (let k in o) {
+            if (new RegExp(`(${k})`).test(format)){//匹配月日时分秒字符串   test()方法用于检测一个字符串是否匹配某个模式.
+                let str = o[k] + ''
+                format = format.replace(RegExp.$1,(RegExp.$1.length === 1)? str:('00'+str).substr(str.length))
+                console.log(('00'+str))
+            }
+        }
+        return format
+    })
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            time:new Date()
+        }
+    })
+</script>
+</html>

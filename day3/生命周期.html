@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生命周期</title>
+    <script src="../day1/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{msg}}</p>
+        <input type="number" v-model="msg">
+        <span>{{msg}}</span>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'123'
+        },
+        methods:{
+
+        },
+        beforeCreate:function () {
+            console.log('beforeCreate实例创建之前')
+            console.log('date',this.data)
+        },
+        created:function () {
+            console.log('created 实例创建之后')
+            console.log('date',this.$data)
+        },
+        beforeMount:function () {
+            console.log('挂载前')
+            console.log(document.querySelector('p').innerText)
+        },
+        mounted:function () {
+            console.log('挂载后')
+            console.log(document.querySelector('p').innerText)
+        },
+        beforeUpdate:function () {
+            console.log('更新状态前')
+            console.log(document.querySelector('span').innerText)
+        },
+        updated:function () {
+            console.log('更新状态后')
+            console.log(document.querySelector('span').innerText)
+        },
+        beforeDestroy:function () {
+            console.log('销毁前')
+            console.log(document.querySelector('p').innerText)
+        },
+        destroyed:function () {
+            console.log('销毁后')
+            console.log(document.querySelector('p').innerText)
+        }
+    })
+</script>
+</html>

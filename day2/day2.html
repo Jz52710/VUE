@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../day1/vue.js"></script>
+</head>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+    .son{
+        width: 100px;
+        height: 100px;
+        background-color: peachpuff;
+    }
+</style>
+<body>
+    <div id="app">
+        <div :class="[a? 'box':'son']"></div>
+        <input type="number" v-model="value">
+        <div v-text="value"></div>
+<!--        <div v-text="fun"></div>-->
+        <p>Original message: "{{ message }}"</p>
+        <p>Computed reversed message: "{{ reversedMessage }}"</p>
+<!--        事件-->
+        <input type="text" @keyup.enter="fun">
+    </div>
+
+</body>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        // template:'<p>123</p>',//模板将会 替换 挂载的元素
+        data:{
+            a:false,
+            value:1,
+            message: 'Hello'
+        },
+         computed: {
+            reversedMessage: function () {
+              // 'this' 指向 vm 实例
+              return this.message.split('').reverse().join('')
+            }
+         },
+        methods:{
+          fun(){
+              console.log(123)
+          }
+        },
+        watch:{
+            value: function (del) {
+                console.log(del)
+            },
+        }
+    })
+</script>
+</html>

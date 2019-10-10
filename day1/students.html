@@ -15,11 +15,11 @@
 <!--             onsubmit="return false"提交不刷新本页面-->
             <div :style="divs">
                 <h3 :style="float">Name:</h3>
-                <input type="text" v-model="newstudent.name">
+                <input type="text" v-model="newstudent.name" v-fous>
             </div>
             <div :style="divs">
                 <h3 :style="float">age:</h3>
-                <input type="text" v-model="newstudent.age">
+                <input type="text" v-model="newstudent.age" v-color="'red'">
             </div>
             <div :style="divs">
                 <h3 :style="float">sex:</h3>
@@ -28,7 +28,7 @@
                     <option value="女">女</option>
                 </select>
             </div>
-            <input type="submit" @click="adds">
+            <input type="submit" @click="adds" class="btn btn-success" >
 
         </form>
         <table class="table table-striped">
@@ -50,6 +50,17 @@
     </div>
 </body>
 <script>
+    //注册全局指令
+    // Vue.directive('fous',{
+    //    inserted:function (el) {
+    //        el.focus()
+    //    }
+    // });
+    // Vue.directive('color',{
+    //     inserted:function (el,binding) {
+    //         el.style.color=binding.value
+    //     }
+    // })
     let vm = new Vue({
         el:'#app',
         data:{
@@ -62,7 +73,8 @@
                 sex:'男'
             },
             student:[
-                {name:'路飞',age:'20',sex:'男'}
+                {name:'路飞',age:'20',sex:'男'},
+                {name:'汉库克',age:'24',sex:'女'}
             ]
         },
         methods:{
@@ -77,7 +89,20 @@
             del:function (index) {
                 this.student.splice(index,1)
             }
-        }
+        },
+        //注册局部指令
+        directives:{
+            fous:{
+                inserted:function (el) {
+                    el.focus()
+                }
+            },
+            color:{
+                inserted:function (el,binding) {
+                    el.style.color=binding.value
+                }
+            }
+        },
     })
 </script>
 </html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day2</title>
+    <script src="../day1/vue.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+    <div id="app">
+        <div :style="{width:width+'px',height:height+'px',backgroundColor:background,position:position,top:top+'px',left:left+'px'}" v-tuo></div>
+    </div>
+</body>
+<script>
+    Vue.directive('tuo',{
+        inserted:function (el) {
+            el.onmousedown=function (i) {
+                let left = i.clientX-el.offsetLeft
+                let top = i.clientY-el.offsetTop
+                document.onmousemove = function (i) {
+                    el.style.left = i.clientX-left+'px'
+                    el.style.top = i.clientY-top+'px'
+                }
+                el.onmouseup = function () {
+                    document.onmousemove = null
+                    el.onmouseup = null
+                }
+            }
+        }
+    });
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            width:200,
+            height:200,
+            background:'pink',
+            position:'absolute',
+            top:0,
+            left:0
+        }
+    })
+</script>
+</html>

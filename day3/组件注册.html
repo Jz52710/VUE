@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件注册</title>
+    <script src="../day1/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <jubu :pmsg1="msg" :pmsg2="msg" :obj="obj" v-bind="obj"></jubu>
+        <input type="text" v-model="msg">
+    </div>
+    <template id="zu">
+        <div>
+            {{ msg }} {{ pmsg1 }}  {{ pmsg2 }}<br>
+            {{ name }}<br>
+            {{ age }}
+        </div>
+    </template>
+</body>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'hello 父',
+            obj:{name:'路飞',age:20}
+        },
+        methods:{
+
+        },
+        components:{
+            'jubu':{
+                template:'#zu',
+                // props:['pmsg2','pmsg1'],
+                props:{
+                    pmsg2:String,
+                    pmsg1:String,
+                    obj: Object,
+                    name: String,
+                    age: {
+                        type:Number,
+                        default:18,
+                        validator:function (val) {
+                            return val>10
+                        }
+                    }
+                },
+                data:function () {
+                    return {
+                        msg:'hello子'
+                    }
+                }
+            },
+
+        }
+    })
+</script>
+</html>

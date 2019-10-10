@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>留言板</title>
+    <script src="../day1/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <message-board></message-board>
+    </div>
+
+    <template id="message-box">
+        <div class="message-box">
+            <message-list :messages="messages"></message-list>
+            <message-form v-on:submitmessage="submitMessage"></message-form>
+        </div>
+    </template>
+
+    <template id="message-list">
+        <div>
+            <message-item v-bind="v" v-for="v in messages"></message-item>
+        </div>
+    </template>
+
+    <template id="message-item">
+        <div>
+            <span>{{ name }}</span>
+            <div>
+                {{ msg }}
+            </div>
+        </div>
+    </template>
+
+    <template id="message-form">
+        <div>
+            <div>
+                <span>姓名</span>
+                <input type="text" v-model="name">
+            </div>
+            <div>
+                <span>留言</span>
+                <textarea name="" id="" cols="30" rows="10" v-model="msg"></textarea>
+            </div>
+            <div>
+                <input type="button" value="提交" @click="submit">
+            </div>
+        </div>
+    </template>
+</body>
+<script>
+    Vue.component('messageBoard',{
+        template:'#message-box',
+        data:function () {
+            return {messages:[{name:'路飞',msg:'顶！！！'}]}
+        },
+        components:{
+            messageList:{
+                template: '#message-list',
+                props:['messages'],
+                components: {
+                    messageItem:{
+                        template:'#message-item',
+                        props: ['name','msg']
+                    }
+                }
+            },
+            messageForm:{
+                template:'#message-form',
+                data:function () {
+                    return{
+                        name:'',
+                        msg:''
+                    }
+                },
+                methods:{
+                    submit:function () {
+                        let data ={}
+                        data.name = this.name
+                        data.msg = this.msg
+                        this.name = ''
+                        this.msg = ''
+                        this.$emit('submitmessage',data)
+                    }
+                }
+            }
+        },
+        methods: {
+            submitMessage:function (data) {
+                this.messages.push(data)
+            }
+        }
+    })
+    let vm = new Vue({
+        el:'#app'
+    })
+</script>
+</html>

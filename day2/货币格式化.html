@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>货币格式化</title>
+    <script src="../day1/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <h3>格式化货币</h3>{{ price1 | currency }}
+        </div>
+        <div>
+            <h3>货币符号位$</h3>{{ price | currency('$') }}
+        </div>
+        <div>
+            <h3>保留2位小数</h3>{{ price | currency('￥',2) }}
+        </div>
+    </div>
+</body>
+<script>
+    Vue.filter('currency',function (value = 0,currencyType  = '￥',limit = 2) {
+        let res;
+        value = value.toFixed(limit)//toFixed() 方法可把 Number 四舍五入为指定小数位数的数字。
+        let prev = value.toString().split('.')[0]//toString() 方法可把一个逻辑值转换为字符串，并返回结果。
+        let next = value.toString().split('.')[1]
+        res = prev.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,') + '.'+next
+        return currencyType + res
+    })
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            price:777.7777,
+            price1:7777777.999
+        }
+    })
+</script>
+</html>
