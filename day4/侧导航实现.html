@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>侧导航</title>
+    <script src="../day1/vue.js"></script>
+    <script src="vue-router.js"></script>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    .aside-box{
+        width: 100px;
+        height: auto;
+        /*border:1px solid pink;*/
+    }
+    .title{
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        background: beige;
+        cursor: pointer;
+    }
+    .aside-box ul li{
+        padding: 5px 0;
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+        background: honeydew;
+    }
+</style>
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+
+    <template id="aside">
+        <div class="aside-box">
+            <aside-list v-for="item in categroys" :item="item"></aside-list>
+        </div>
+    </template>
+
+    <template id="asidelist">
+        <div>
+             <h3 @click="flag=!flag" class="title">{{ item.title }}</h3>
+             <ul v-if="flag=flag">
+                <li v-for="a in item.con">{{ a }}</li>
+            </ul>
+        </div>
+    </template>
+
+</body>
+<script>
+    const router = new VueRouter({
+        routes:[
+            {
+                path:'/',
+                component:{
+                    template:'#aside',
+                    data:function () {
+                        return {
+                            categroys:[
+                                {title:'首页',con:[]},
+                                {title:'组件化思想',con:['web开发发展史','前端构架变迁']},
+                                {title:'vue介绍',con:['vue介绍','vue安装','vue实例']},
+                                {title:'vue基础',con:['数据绑定','指令详解','自定义指令','样式绑定']},
+                                {title:'vue组件',con:['组件化','组件注册','组件通信','动态组件','组件插槽']},
+                                {title:'vue动画',con:['vue动画','列表过度','状态过度']},
+                                {title:'vue路由',con:['路由介绍','路由初体验','路由动态匹配','嵌套路由']},
+                            ]
+                        }
+                    },
+                    components: {
+                        asideList:{
+                            template: '#asidelist',
+                            props:['item'],
+                            data:function () {
+                                return {
+                                    flag:false
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    })
+
+    let vm = new Vue({
+        el:'#app',
+        router,
+    })
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>路由</title>
+    <script src="../day1/vue.js"></script>
+    <script src="vue-router.js"></script>
+</head>
+<style>
+    .router-link-active{
+        font-size: 18px;
+        color: red;
+    }
+</style>
+<body>
+    <div id="app">
+<!--        <a href="#/home">首页</a>-->
+<!--        <a href="#/page">详情</a>-->
+        <router-link tag="li" to="home">home</router-link>
+        <router-link to="page">page</router-link>
+        <router-link to="user">user</router-link>
+        <router-view></router-view>
+    </div>
+</body>
+<script>
+    const router = new VueRouter({//创建一个路由系统
+        routes:[//类型是一个数组，内部放路由对象
+            {//创建第一个路由
+                'path':'/home*',  //路由地址
+                'component':{
+                    template:'<div>' +
+                        '<p>当前路径：{{ $route.path }}</p>' +
+                        '<p>当前参数：{{ $route.params }}</p>' +
+                        '<p>查询参数：{{ $route.query }}</p>' +
+                        '<p>哈希：{{ $route.hash }}</p>' +
+                        '</div>'
+                }
+            },
+            {
+                'path':'/page:id',
+                'component':{
+                    template:'<div><h2>我是{{ $route.params.id}}</h2></div>'
+                }
+            },
+            {
+                'path':'/user*',
+                'component':{
+                    template:'<div><h2>我是{{ $route.query.name }},今年{{ $route.query.age }}岁</h2></div>'
+                }
+            }
+        ],
+    })
+    let vm = new Vue({
+        el:'#app',
+        data:{},
+        methods:{},
+        router,
+    })
+</script>
+</html>

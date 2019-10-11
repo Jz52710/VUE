@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>嵌套路由</title>
+    <script src="../day1/vue.js"></script>
+    <script src="vue-router.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+    <div id="app">
+        <h2>智能电影推荐</h2>
+        <router-link to="/moren">默认推荐</router-link>
+        <router-link to="/movie">按题材推荐</router-link>
+        <router-link to="/prize">按奖项推荐</router-link>
+        <router-link to="/pf">按评分推荐</router-link>
+        <router-link to="/zzry">正在热映</router-link>
+        <router-view></router-view>
+    </div>
+<!--    默认-->
+    <template id="mr">
+        <div>
+            <p>这是默认推荐电影</p>
+        </div>
+    </template>
+<!--    分类-->
+    <template id="mover">
+        <div>
+            <router-link to="/movie/战争">战争</router-link>
+            <router-link to="/movie/动作">动作</router-link>
+            <router-link to="/movie/科幻">科幻</router-link>
+            <router-link to="/movie/悬疑">悬疑</router-link>
+            <router-link to="/movie/喜剧">喜剧</router-link>
+            <router-link to="/movie/爱情">爱情</router-link>
+            <router-link to="/movie/励志">励志</router-link>
+            <router-link to="/movie/动画">动画</router-link>
+            <router-link to="/movie/惊悚">惊悚</router-link>
+            <router-link to="/movie/犯罪">犯罪</router-link>
+            <router-link to="/movie/记录">记录</router-link>
+            <router-link to="/movie/情色">情色</router-link>
+            <router-link to="/movie/剧情">剧情</router-link>
+            <router-view></router-view>
+        </div>
+    </template>
+<!--分类里-->
+    <template id="zz">
+        <div>
+            <p>我是战争</p>
+        </div>
+    </template>
+    <template id="dz">
+        <div>
+            <p>我是动作</p>
+        </div>
+    </template>
+    <template id="kh">
+        <div>
+            <p>我是科幻</p>
+        </div>
+    </template>
+    <template id="xy">
+        <div>
+            <p>我是悬疑</p>
+        </div>
+    </template>
+    <template id="xj">
+        <div>
+            <p>我是喜剧</p>
+        </div>
+    </template>
+    <template id="aq">
+        <div>
+            <p>我是爱情</p>
+        </div>
+    </template>
+    <template id="lz">
+        <div>
+            <p>我是励志</p>
+        </div>
+    </template>
+    <template id="dh">
+        <div>
+            <p>我是动画</p>
+        </div>
+    </template>
+    <template id="js">
+        <div>
+            <p>我是惊悚</p>
+        </div>
+    </template>
+    <template id="fz">
+        <div>
+            <p>我是犯罪</p>
+        </div>
+    </template>
+    <template id="jl">
+        <div>
+            <p>我是记录</p>
+        </div>
+    </template>
+    <template id="qs">
+        <div>
+            <p>我是情色</p>
+        </div>
+    </template>
+    <template id="jq">
+        <div>
+            <p>我是剧情</p>
+        </div>
+    </template>
+<!--奖项-->
+    <template id="prizes">
+        <div>
+            <router-link to="/prize/奥斯卡">奥斯卡</router-link>
+            <router-link to="/prize/金棕榈">金棕榈</router-link>
+            <router-link to="/prize/金熊奖">金熊奖</router-link>
+            <router-link to="/prize/金狮奖">金狮奖</router-link>
+            <router-link to="/prize/金马奖">金马奖</router-link>
+            <router-link to="/prize/金像奖">金像奖</router-link>
+            <router-link to="/prize/金鸡奖">金鸡奖</router-link>
+            <router-view></router-view>
+        </div>
+    </template>
+<!--奖项分类-->
+    <template id="ask">
+        <div>
+            <p>我是奥斯卡</p>
+        </div>
+    </template>
+    <template id="jzl">
+        <div>
+            <p>我是金棕榈</p>
+        </div>
+    </template>
+    <template id="jxoj">
+        <div>
+            <p>我是金熊奖</p>
+        </div>
+    </template>
+    <template id="jsj">
+        <div>
+            <p>我是金狮奖</p>
+        </div>
+    </template>
+    <template id="jmj">
+        <div>
+            <p>我是金马奖</p>
+        </div>
+    </template>
+    <template id="jxj">
+        <div>
+            <p>我是金像奖</p>
+        </div>
+    </template>
+    <template id="jjj">
+        <div>
+            <p>我是金鸡奖</p>
+        </div>
+    </template>
+<!--评分-->
+    <template id="pf">
+        <div>
+            <p>我是评分</p>
+        </div>
+    </template>
+<!--正在热映-->
+    <template id="reyin">
+        <div>
+            <p>我是正在热映</p>
+        </div>
+    </template>
+</body>
+<script>
+    //创建路由
+    const router = new VueRouter({
+        routes:[
+            {
+                path:'/moren',
+                component:{
+                    template:'#mr'
+                }
+            },
+            {
+                path:'/movie',
+                component:{
+                    template:'#mover'
+                },
+                children:[
+                    {
+                        path: '战争',
+                        component: {
+                            template: '#zz'
+                        }
+                    },
+                    {
+                        path:'动作',
+                        component:{
+                            template:'#dz'
+                        }
+                    },
+                    {
+                        path:'科幻',
+                        component:{
+                            template:'#kh'
+                        }
+                    },
+                    {
+                        path:'悬疑',
+                        component:{
+                            template:'#xy'
+                        }
+                    },
+                    {
+                        path:'喜剧',
+                        component:{
+                            template:'#xj'
+                        }
+                    },
+                    {
+                        path:'爱情',
+                        component:{
+                            template:'#aq'
+                        }
+                    },
+                    {
+                        path:'励志',
+                        component:{
+                            template:'#lz'
+                        }
+                    },
+                    {
+                        path:'动画',
+                        component:{
+                            template:'#dh'
+                        }
+                    },
+                    {
+                        path:'惊悚',
+                        component:{
+                            template:'#js'
+                        }
+                    },
+                    {
+                        path:'犯罪',
+                        component:{
+                            template:'#fz'
+                        }
+                    },
+                    {
+                        path:'记录',
+                        component:{
+                            template:'#jl'
+                        }
+                    },{
+                        path:'情色',
+                        component:{
+                            template:'#qs'
+                        }
+                    },{
+                        path:'剧情',
+                        component:{
+                            template:'#jq'
+                        }
+                    },
+                ]
+            },
+            {
+                path:'/prize',
+                component:{
+                    template:'#prizes'
+                },
+                children:[
+                    {
+                        path:'奥斯卡',
+                        component:{
+                            template:'#ask'
+                        }
+                    },
+                    {
+                        path:'金棕榈',
+                        component:{
+                            template:'#jzl'
+                        }
+                    },
+                    {
+                        path:'金熊奖',
+                        component:{
+                            template:'#jxoj'
+                        }
+                    },
+                    {
+                        path:'金狮奖',
+                        component:{
+                            template:'#jsj'
+                        }
+                    },
+                    {
+                        path:'金马奖',
+                        component:{
+                            template:'#jmj'
+                        }
+                    },
+                    {
+                        path:'金像奖',
+                        component:{
+                            template:'#jxj'
+                        }
+                    },
+                    {
+                        path:'金鸡奖',
+                        component:{
+                            template:'#jjj'
+                        }
+                    },
+                ]
+            },
+            {
+                path:'/pf',
+                component:{
+                    template:'#pf'
+                }
+            },
+            {
+                path:'/zzry',
+                component:{
+                    template:'#reyin'
+                }
+            }
+        ]
+    })
+    //实例化vue
+    let vm = new Vue({
+        el:'#app',
+        router,
+    })
+</script>
+</html>

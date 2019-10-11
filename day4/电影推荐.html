@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电影推荐</title>
+    <script src="../day1/vue.js"></script>
+    <script src="vue-router.js"></script>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    .aside-box{
+        width: 200px;
+        height: auto;
+        border: 1px solid pink;
+    }
+    .title{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+    <template id="aside">
+        <div class="aside-box">
+            <aside-list v-for="item in categroys" :item="item"></aside-list>
+        </div>
+    </template>
+
+    <template id="asidelist">
+        <div>
+            <h3 @click="flag=!flag" class="title">{{ item.title }}</h3>
+            <ul v-show="flag=flag">
+                <li v-for="movie in item.con">{{ movie }}</li>
+            </ul>
+        </div>
+    </template>
+</body>
+<script>
+    const router = new VueRouter({
+        routes:[
+            {
+                path:'/',
+                component:{
+                    template:'#aside',
+                    data:function () {
+                        return {
+                            categroys: [
+                                {title:'默认推荐',con:[]},
+                                {title:'按题材推荐',con:['战争','动作','科幻','悬疑','喜剧','爱情','励志','动画','惊悚','犯罪','记录','情色','剧情']},
+                                {title:'按奖项推荐',con:['奥斯卡','金棕榈','金熊奖','金狮奖','金马奖','金像奖','金鸡奖']},
+                                {title:'按评分推荐',con:[]},
+                                {title:'正在热映',con:[]}
+                            ]
+                        }
+                    },
+                    components:{
+                        asideList: {
+                            template: '#asidelist',
+                            props:['item'],
+                            data:function () {
+                                return {
+                                    flag: false,
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    })
+    let vm = new Vue({
+        el:'#app',
+        router,
+    })
+</script>
+</html>

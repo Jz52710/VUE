@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d11dba27-8854-49bb-82a9-3bf342e3579f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day2/day2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/时间过滤器.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/货币格式化.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/全局组件注册.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/子组向父组传递信息.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/生命周期.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/留言板.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day3/组件注册.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/插槽.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/lx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/movie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/侧导航实现.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/嵌套路由.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/电影推荐.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day4/路由.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day1/students.html" beforeDir="false" afterPath="$PROJECT_DIR$/day1/students.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,20 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day3/子组向父组传递信息.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day3/留言板.html">
+        <entry file="file://$PROJECT_DIR$/day4/电影推荐.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
-              <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+              <caret line="59" column="53" lean-forward="true" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -72,6 +58,13 @@
         <option value="$PROJECT_DIR$/day3/组件注册.html" />
         <option value="$PROJECT_DIR$/day3/子组向父组传递信息.html" />
         <option value="$PROJECT_DIR$/day3/留言板.html" />
+        <option value="$PROJECT_DIR$/day3/插槽.html" />
+        <option value="$PROJECT_DIR$/day4/路由.html" />
+        <option value="$PROJECT_DIR$/day4/嵌套路由.html" />
+        <option value="$PROJECT_DIR$/day4/侧导航实现.html" />
+        <option value="$PROJECT_DIR$/day4/电影推荐.html" />
+        <option value="$PROJECT_DIR$/day4/movie.html" />
+        <option value="$PROJECT_DIR$/day4/lx.html" />
       </list>
     </option>
   </component>
@@ -99,7 +92,7 @@
             <path>
               <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
               <item name="VUE" type="462c0819:PsiDirectoryNode" />
-              <item name="day3" type="462c0819:PsiDirectoryNode" />
+              <item name="day4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -149,17 +142,20 @@
       <workItem from="1570630268528" duration="6828000" />
       <workItem from="1570667608071" duration="565000" />
       <workItem from="1570668327634" duration="20596000" />
+      <workItem from="1570715510937" duration="5053000" />
+      <workItem from="1570753935487" duration="24045000" />
+      <workItem from="1570795288734" duration="6211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59472000" />
+    <option name="totallyTimeSpent" value="94781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26675603" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16420911" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -280,20 +276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day3/生命周期.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="48" column="65" lean-forward="true" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day3/组件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day3/全局组件注册.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -301,24 +283,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day3/组件注册.html">
+    <entry file="file://$PROJECT_DIR$/day3/生命周期.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+        <state relative-caret-position="599">
+          <caret line="48" column="65" lean-forward="true" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day3/子组向父组传递信息.html">
+    <entry file="file://$PROJECT_DIR$/day3/插槽.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="266">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day3/组件注册.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day3/组件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day3/留言板.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="68" column="17" lean-forward="true" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day3/子组向父组传递信息.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/vue-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1368">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/路由.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/movie.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/lx.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/嵌套路由.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2729">
+          <caret line="271" selection-start-line="271" selection-end-line="271" />
+          <folding>
+            <element signature="n#template#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#5;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#6;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#7;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#8;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#9;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#10;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#11;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#12;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#13;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#14;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#15;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#16;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#17;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#18;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#19;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#20;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#21;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#23;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#template#24;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/侧导航实现.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="45" column="14" lean-forward="true" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/电影推荐.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
-          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <caret line="59" column="53" lean-forward="true" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
         </state>
       </provider>
     </entry>

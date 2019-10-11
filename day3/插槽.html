@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>插槽</title>
+    <script src="../day1/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <chacao>
+            <template #add>
+                <h5>我是add具名插槽</h5>
+            </template>
+<!--            <div slot="add">123</div>-->
+            <template #pdd>
+                <h5>我是pdd具名插槽</h5>
+            </template>
+<!--            <h5>我是默认插槽</h5>-->
+            <template v-slot:default="props">
+                <div>姓名:{{ props.name }} 年龄:{{ props.age }}</div>
+            </template>
+        </chacao>
+    </div>
+    <template id="cc">
+        <div>
+            这是组件
+            <slot name="add"></slot>
+            <slot name="pdd"></slot>
+<!--            <slot></slot>-->
+            <slot  v-for="item in users" v-bind="item"></slot>
+        </div>
+    </template>
+</body>
+<script>
+    Vue.component('chacao',{
+        template:'#cc',
+        data:function () {
+            return {
+                users:[
+                    {name:'小白',age:20},
+                    {name:'小黑',age:22}
+                ]
+            }
+        }
+    })
+    let vm = new Vue({
+        el:'#app',
+        data:{
+
+        },
+
+    })
+</script>
+</html>
