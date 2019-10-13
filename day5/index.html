@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>命名视图</title>
+    <script src="../day1/vue.js"></script>
+    <script src="vue-router.js"></script>
+</head>
+<style>
+    body,html,#app{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .box{
+        display: flex;
+        height: calc(100% - 50px);
+    }
+    .header-box{
+        width: 100%;
+        height: 50px;
+        background-color:pink;
+    }
+    .aside-box{
+        flex-grow: 0;
+        flex-basis: 200px;
+        background-color: palegoldenrod;
+    }
+    .main-box{
+        flex-grow: 1;
+        background-color: peachpuff;
+    }
+</style>
+<body>
+    <div id="app">
+        <router-view></router-view>
+        <div class="box">
+            <router-view name="aside"></router-view>
+            <router-view name="main"></router-view>
+        </div>
+    </div>
+
+    <template id="header">
+        <div class="header-box">
+            <h3>后台管理</h3>
+            <router-link to="">控制台</router-link>
+            <router-link to="">商品管理</router-link>
+            <router-link to="">用户</router-link>
+            <router-link to="">其他系统</router-link>
+        </div>
+    </template>
+
+    <template id="aside">
+        <div class="aside-box">
+            this is aside
+        </div>
+    </template>
+
+    <template id="main">
+        <div class="main-box">
+            this is main
+        </div>
+    </template>
+
+</body>
+<script>
+    const router = new VueRouter({
+        routes:[
+            {
+                path:'/',
+                components:{
+                    default:{
+                        template:'#header'
+                    },
+                    aside:{
+                        template: "#aside"
+                    },
+                    main:{
+                        template:'#main'
+                    }
+                }
+            },
+            {
+                path:'/控制台'
+                component:{
+
+                }
+            }
+        ]
+    })
+    let vm = new Vue({
+        el:'#app',
+        router,
+    })
+</script>
+</html>

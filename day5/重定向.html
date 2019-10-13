@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>重定向</title>
+    <script src="../day1/vue.js"></script>
+    <script src="vue-router.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+    <div id="app">
+        <router-link to="/home">home</router-link>
+        <router-link to="/page">page</router-link>
+        <router-view></router-view>
+    </div>
+
+    <template id="home">
+        <div>
+            我是home
+        </div>
+    </template>
+
+    <template id="page">
+        <div>
+            我是page
+        </div>
+    </template>
+</body>
+<script>
+    const router = new VueRouter({
+        routes:[
+            {
+                path:'/',
+                component:{
+                    template:'#zy'
+                },
+                // redirect:'/home'//重定向
+            },
+            {
+                path:'/home',
+                component:{
+                    template:'#home'
+                },
+                alias:'/msg'
+            },
+            {
+                path:'/page',
+                component:{
+                    template:'#page'
+                }
+            }
+        ]
+    })
+    let vm = new Vue({
+        el:'#app',
+        router,
+    })
+</script>
+</html>

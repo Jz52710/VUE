@@ -26,11 +26,13 @@
 </style>
 <body>
     <div id="app">
+        <router-link to="/home">home</router-link>
+        <router-link to="/page">page</router-link>
         <router-view></router-view>
     </div>
     <template id="aside">
         <div class="aside-box">
-            <aside-list v-for="item in categroys" :item="item"></aside-list>
+            <aside-list v-for="item in categroys" :item="item" :key="item.title"></aside-list>
         </div>
     </template>
 
@@ -42,12 +44,25 @@
             </ul>
         </div>
     </template>
+
+    <template id="page">
+        <div>
+            <router-link :to="{name:'msgs',params:{id:11},query:{user:'小白'}}">msg</router-link>
+            <router-view></router-view>
+        </div>
+    </template>
+
+    <template id="msg1">
+        <div>
+            <p>哈哈哈</p>
+        </div>
+    </template>
 </body>
 <script>
     const router = new VueRouter({
         routes:[
             {
-                path:'/',
+                path:'/home',
                 component:{
                     template:'#aside',
                     data:function () {
@@ -73,6 +88,21 @@
                         }
                     }
                 }
+            },
+            {
+                path:'/page',
+                component:{
+                    template:'#page'
+                },
+                children:[
+                    {
+                        path:'msg:id',
+                        name:'msgs',
+                        component:{
+                            template:'#msg1',
+                        }
+                    }
+                ]
             }
         ]
     })
