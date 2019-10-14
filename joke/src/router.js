@@ -1,9 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Home from './views/Home.vue'
 import Text from './views/Text.vue'
 import Img from  './views/Imgs.vue'
 import Gif from './views/Gifs.vue'
+import Bao from './views/Baoxiao.vue'
+import Leng from './views/Lengxiaohua.vue'
+import Sun from './views/Sunkouliu.vue'
+import Yi from './views/Yijuhua.vue'
+import Gao from './views/Gaoxiao.vue'
+import Kong from './views/Kongbu.vue'
+import Nei from './views/Neihan.vue'
+import Duan from './views/Duan.vue'
+import Ming from './views/Mingzhu.vue'
+import Hh from './views/Haha.vue'
 
 Vue.use(Router)
 
@@ -23,9 +32,68 @@ export default new Router({
     //   component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     // }
     {
+      path:'/',
+      redirect:'/text/baoxiao',
+      alias:'/text'
+    },
+    {
       path:'/text',
       name:'text',
-      component:Text
+      component:Text,
+      redirect:'/text/baoxiao',
+      children:[
+        {
+          path:'baoxiao',
+          name:'baoxiao',
+          component:Bao,
+        },
+        {
+          path:'lengxiaohua',
+          name:'lengxiaohua',
+          component:Leng
+        },
+        {
+          path:'shunkouliu',
+          name:'shunkouliu',
+          component:Sun
+        },
+        {
+          path:'yijuhua',
+          name:'yijuhua',
+          component:Yi
+        },
+        {
+          path:'gaoxiao',
+          name:'gaoxiao',
+          component:Gao
+        },
+        {
+          path:'kongbu',
+          name:'kongbu',
+          component:Kong
+        },
+        {
+          path:'neihan',
+          name:'neihan',
+          component:Nei
+        },
+        {
+          path:'duanxiaohua',
+          name:'duanxiaohua',
+          component:Duan
+        },
+        {
+          path:'mingzhu',
+          name:'mingzhu',
+          component:Ming
+        },
+        {
+          path:'hh',
+          name:'hh',
+          component:Hh
+        }
+
+      ]
     },
     {
       path:'/img',
@@ -36,6 +104,7 @@ export default new Router({
       path:'/gif',
       name:'gif',
       component:Gif
-    }
+    },
+
   ]
 })

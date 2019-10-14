@@ -6,9 +6,18 @@
 <!--    </div>-->
 <!--    下面的导航栏-->
     <div class="nav">
-      <router-link to="/text" tag="div">文本</router-link>
-      <router-link to="/img" tag="div">图片</router-link>
-      <router-link to="/gif" tag="div">动图</router-link>
+      <router-link to="/text" tag="div" class="nav-box">
+          <i class="iconfont icon-rili"></i>
+          <p>笑话</p>
+      </router-link>
+      <router-link to="/img" tag="div" class="nav-box">
+          <i class="iconfont icon-tupian"></i>
+          <p>趣图</p>
+      </router-link>
+      <router-link to="/gif" tag="div" class="nav-box">
+          <i class="iconfont icon-icon_xinyong_xianxing_jijin-"></i>
+          <p>动图</p>
+      </router-link>
     </div>
 <!--    上面的-->
     <router-view></router-view>
@@ -38,13 +47,20 @@
   .nav{
     width: 100%;
     height: 10%;
-    background-color: pink;
-    position: absolute;
+    background-color: #aac9ce;
+    position: fixed;
+    z-index: 10;
     bottom: 0;
     display: flex;
   }
-  .nav div{
-    flex-grow: 1;
-    padding: 20px 0;
+  .iconfont{
+      font-size: 1.25rem;
   }
+  .nav-box{
+    flex-grow: 1;
+    padding: 0.75rem 0;
+  }
+.router-link-active{
+    color: #fa897b;
+}
 </style>

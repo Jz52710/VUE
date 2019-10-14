@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d11dba27-8854-49bb-82a9-3bf342e3579f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day5/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day5/vue-router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day5/重定向.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/joke/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/joke/src/views/Gifs.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/joke/src/views/Imgs.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/joke/src/views/Text.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/components/Baoxiaos.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/components/Gifimg.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/components/imgs.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Baoxiao.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Duan.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Gaoxiao.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Haha.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Kongbu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Lengxiaohua.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Mingzhu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Neihan.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Sunkouliu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/joke/src/views/Yijuhua.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day4/电影推荐.html" beforeDir="false" afterPath="$PROJECT_DIR$/day4/电影推荐.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day5/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joke/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/joke/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joke/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/joke/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joke/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/joke/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joke/src/views/Gifs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/joke/src/views/Gifs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joke/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/joke/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joke/src/views/Imgs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/joke/src/views/Imgs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joke/src/views/Text.vue" beforeDir="false" afterPath="$PROJECT_DIR$/joke/src/views/Text.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,20 +36,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/joke/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+            <state relative-caret-position="254">
+              <caret line="42" column="12" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
               <folding>
-                <marker date="1570876317432" expanded="false" signature="28:183" ph="..." />
+                <marker date="1571046767936" expanded="false" signature="28:183" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/joke/src/views/Text.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -44,35 +48,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/joke/src/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+            <state relative-caret-position="323">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#93#128#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/joke/src/views/Imgs.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/joke/src/views/Gifs.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -109,13 +101,32 @@
         <option value="$PROJECT_DIR$/day4/movie.html" />
         <option value="$PROJECT_DIR$/day4/lx.html" />
         <option value="$PROJECT_DIR$/day4/电影推荐.html" />
-        <option value="$PROJECT_DIR$/day5/index.html" />
         <option value="$PROJECT_DIR$/day5/重定向.html" />
-        <option value="$PROJECT_DIR$/joke/src/router.js" />
-        <option value="$PROJECT_DIR$/joke/src/views/Imgs.vue" />
-        <option value="$PROJECT_DIR$/joke/src/views/Gifs.vue" />
-        <option value="$PROJECT_DIR$/joke/src/App.vue" />
+        <option value="$PROJECT_DIR$/day5/index.html" />
+        <option value="$PROJECT_DIR$/joke/src/views/Textcon.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/baoxiao.vue" />
+        <option value="$PROJECT_DIR$/joke/src/components/Baoxiao.vue" />
         <option value="$PROJECT_DIR$/joke/src/views/Text.vue" />
+        <option value="$PROJECT_DIR$/joke/src/components/HelloWorld.vue" />
+        <option value="$PROJECT_DIR$/joke/src/components/Baoxiaos.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Gifs.vue" />
+        <option value="$PROJECT_DIR$/joke/src/components/Gifimg.vue" />
+        <option value="$PROJECT_DIR$/joke/src/components/imgs.vue" />
+        <option value="$PROJECT_DIR$/joke/src/router.js" />
+        <option value="$PROJECT_DIR$/joke/public/index.html" />
+        <option value="$PROJECT_DIR$/joke/src/App.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Baoxiao.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Duan.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Gaoxiao.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Haha.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Home.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Imgs.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Kongbu.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Lengxiaohua.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Mingzhu.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Neihan.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Sunkouliu.vue" />
+        <option value="$PROJECT_DIR$/joke/src/views/Yijuhua.vue" />
       </list>
     </option>
   </component>
@@ -133,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,11 +157,16 @@
               <item name="VUE" type="462c0819:PsiDirectoryNode" />
               <item name="joke" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="VUE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VUE" type="462c0819:PsiDirectoryNode" />
+              <item name="joke" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,8 +182,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\86427\Desktop\VUE\joke\src\views" />
+      <recent name="C:\Users\86427\Desktop\VUE\joke\src\components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\86427\Desktop\VUE\day5" />
     </key>
@@ -206,16 +229,18 @@
       <workItem from="1570870282483" duration="6535000" />
       <workItem from="1570967103136" duration="175000" />
       <workItem from="1570967602460" duration="109000" />
+      <workItem from="1570972708290" duration="4689000" />
+      <workItem from="1571013614012" duration="31012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113144000" />
+    <option name="totallyTimeSpent" value="148845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17426273" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18766756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -228,8 +253,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3281471" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32719547" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -265,34 +290,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day1/跑马灯.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day1/vue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day1/students.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-          <folding>
-            <element signature="e#1982#2333#0" />
-            <element signature="e#2351#2692#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day2/day2.py" />
     <entry file="file://$PROJECT_DIR$/day1/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -415,13 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day4/路由.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day4/嵌套路由.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -458,41 +448,6 @@
     <entry file="file://$PROJECT_DIR$/day5/vue-router.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/day4/电影推荐.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="e#1358#1893#0" />
-            <element signature="e#2519#2575#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day5/重定向.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day5/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/joke/src/views/About.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/joke/src/views/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/joke/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -502,45 +457,197 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/joke/src/App.vue">
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Textcon.vue" />
+    <entry file="file://$PROJECT_DIR$/day5/重定向.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/a.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/路由.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/assets/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/电影推荐.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-389">
+          <caret line="34" column="55" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/components/HelloWorld.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/components/Baoxiaos.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding>
-            <marker date="1570876317432" expanded="false" signature="28:183" ph="..." />
-          </folding>
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/joke/src/views/Text.vue">
+    <entry file="file://$PROJECT_DIR$/joke/src/views/About.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/components/Gifimg.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="190">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/joke/src/router.js">
+    <entry file="file://$PROJECT_DIR$/joke/src/components/imgs.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#93#128#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="57">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/joke/src/views/Imgs.vue">
+    <entry file="file://$PROJECT_DIR$/joke/public/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state relative-caret-position="209">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/joke/src/views/Gifs.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state relative-caret-position="19">
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="53" lean-forward="true" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Imgs.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Mingzhu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Neihan.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Sunkouliu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Text.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Lengxiaohua.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Kongbu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Haha.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Gaoxiao.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Duan.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Baoxiao.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/views/Yijuhua.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/joke/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="42" column="12" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+          <folding>
+            <marker date="1571046767936" expanded="false" signature="28:183" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
