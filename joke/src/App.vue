@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-<!--    <div id="nav">-->
-<!--      <router-link to="/">Home</router-link> |-->
-<!--      <router-link to="/about">About</router-link>-->
-<!--    </div>-->
 <!--    下面的导航栏-->
     <div class="nav">
       <router-link to="/text" tag="div" class="nav-box">
@@ -18,6 +14,10 @@
           <i class="iconfont icon-icon_xinyong_xianxing_jijin-"></i>
           <p>动图</p>
       </router-link>
+        <router-link to="/video" tag="div" class="nav-box">
+            <i class="iconfont icon-shipin"></i>
+            <p>视频</p>
+        </router-link>
     </div>
 <!--    上面的-->
     <router-view></router-view>

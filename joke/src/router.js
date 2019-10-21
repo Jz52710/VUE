@@ -13,6 +13,7 @@ import Nei from './views/Neihan.vue'
 import Duan from './views/Duan.vue'
 import Ming from './views/Mingzhu.vue'
 import Hh from './views/Haha.vue'
+import Video from './views/Video.vue'
 
 Vue.use(Router)
 
@@ -105,6 +106,10 @@ export default new Router({
       name:'gif',
       component:Gif
     },
-
+    {
+      path:'/video',
+      name:'video',
+      component:Video
+    }
   ]
 })
