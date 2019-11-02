@@ -101,4 +101,11 @@ export default {
         justify-content: center;
         align-items: center;
     }
+    .card-top .el-card__body{
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+        color: #fff;
+        background: #409eff url("../../assets/login/bj.png") no-repeat bottom/auto;
+    }
 </style>

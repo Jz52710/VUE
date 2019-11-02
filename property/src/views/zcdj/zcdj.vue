@@ -931,14 +931,11 @@
             editRegister(index,row){
                 this.editDialogTableVisible = true;
                 this.editRegisterData = JSON.parse(JSON.stringify(row));
+                this.tableData[index]=this.editRegisterData;
             },
             editRegisterDone(){
                 this.editDialogTableVisible = false;
-                //ajax 提交编辑数据 editRegisterData
                 if(true){
-                    console.log(this.editRegisterData);
-                    console.log(this.tableData);
-                    this.tableData[0]=this.editRegisterData;
                     this.$message({
                         type: 'success',
                         message: '编辑成功!'
